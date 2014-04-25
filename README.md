@@ -17,7 +17,7 @@ var pngout = require('imagemin-pngout');
 var imagemin = new Imagemin()
     .src('foo.png')
     .dest('foo-optimized.png')
-    .use(pngout({ interlaced: true }));
+    .use(pngout({ strategy: 1 }));
 
 imagemin.optimize();
 ```
@@ -31,11 +31,11 @@ Default: `0`
 
 Select a strategy level between `0` and `4`:
 
-0. Extreme
-1. Intense
-2. Longest match
-3. Huffman only
-4. Uncompressed
+`0.` Extreme  
+`1.` Intense  
+`2.` Longest match  
+`3.` Huffman only  
+`4.` Uncompressed  
 
 ## License
 
