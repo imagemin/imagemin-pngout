@@ -1,6 +1,7 @@
-# imagemin-pngout [![Build Status](https://travis-ci.org/kevva/imagemin-pngout.svg?branch=master)](https://travis-ci.org/kevva/imagemin-pngout)
+# imagemin-pngout [![Build Status](http://img.shields.io/travis/imagemin/imagemin-pngout.svg?style=flat)](https://travis-ci.org/imagemin/imagemin-pngout)
 
-> pngout image-min plugin
+> pngout imagemin plugin
+
 
 ## Install
 
@@ -8,19 +9,21 @@
 $ npm install --save imagemin-pngout
 ```
 
+
 ## Usage
 
 ```js
-var Imagemin = require('image-min');
+var Imagemin = require('imagemin');
 var pngout = require('imagemin-pngout');
 
 var imagemin = new Imagemin()
-    .src('foo.png')
-    .dest('foo-optimized.png')
-    .use(pngout({ strategy: 1 }));
+	.src('foo.png')
+	.dest('foo-optimized.png')
+	.use(pngout({ strategy: 1 }));
 
 imagemin.optimize();
 ```
+
 
 ## Options
 
