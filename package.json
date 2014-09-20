@@ -1,7 +1,7 @@
 {
   "name": "imagemin-pngout",
   "version": "0.1.0",
-  "description": "pngout image-min plugin",
+  "description": "pngout imagemin plugin",
   "license": "MIT",
   "repository": "imagemin/imagemin-pngout",
   "author": {
@@ -20,20 +20,23 @@
   ],
   "keywords": [
     "compress",
+    "gulpplugin",
     "image",
     "imageminplugin",
     "img",
     "minify",
     "optimize",
-    "png"
+    "png",
+    "pngout"
   ],
   "dependencies": {
-    "exec-buffer": "^1.0.1",
     "is-png": "^1.0.0",
-    "pngout-bin": "^0.1.5"
+    "pngout-bin": "^1.0.0",
+    "through2": "^0.6.1"
   },
   "devDependencies": {
     "ava": "^0.0.4",
-    "imagemin": "^1.0.5"
+    "buffer-equal": "0.0.1",
+    "vinyl-file": "^1.1.0"
   }
 }
