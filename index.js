@@ -30,7 +30,6 @@ module.exports = function (opts) {
 			return;
 		}
 
-		var size = file.contents.length;
 		var args = ['-', '-', '-y', '-force'];
 		var err = '';
 		var ret = [];
@@ -42,7 +41,7 @@ module.exports = function (opts) {
 
 		var cp = spawn(pngout, args);
 
-		cp.stderr.on('error', function(err) {
+		cp.stderr.on('error', function (err) {
 			cb(err);
 		});
 
@@ -62,7 +61,7 @@ module.exports = function (opts) {
 				return;
 			}
 
-			if (len < size) {
+			if (len < file.contents.length) {
 				file.contents = Buffer.concat(ret, len);
 			}
 

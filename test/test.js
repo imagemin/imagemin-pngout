@@ -10,7 +10,7 @@ var test = require('ava');
 test('optimize a PNG', function (t) {
 	t.plan(3);
 
-	read(path.join(__dirname, 'fixtures/test.png'), function(err, file) {
+	read(path.join(__dirname, 'fixtures/test.png'), function (err, file) {
 		t.assert(!err);
 
 		var stream = pngout();
@@ -28,11 +28,11 @@ test('optimize a PNG', function (t) {
 test('skip optimizing a non-PNG file', function (t) {
 	t.plan(2);
 
-	read(__filename, function(err, file) {
+	read(__filename, function (err, file) {
 		t.assert(!err);
 
 		var stream = pngout();
-		var buf = file.contents.slice();
+		var buf = file.contents;
 
 		stream.on('data', function (data) {
 			t.assert(bufferEqual(file.contents, buf));
@@ -45,11 +45,11 @@ test('skip optimizing a non-PNG file', function (t) {
 test('skip optimizing an already optimized PNG', function (t) {
 	t.plan(2);
 
-	read(path.join(__dirname, 'fixtures/test-smallest.png'), function(err, file) {
+	read(path.join(__dirname, 'fixtures/test-smallest.png'), function (err, file) {
 		t.assert(!err);
 
 		var stream = pngout();
-		var buf = file.contents.slice();
+		var buf = file.contents;
 
 		stream.on('data', function (data) {
 			t.assert(bufferEqual(file.contents, buf));
