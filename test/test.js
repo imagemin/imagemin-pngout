@@ -31,7 +31,7 @@ test('optimize a PNG using ctor', function (t) {
 	var Pngout = pngout.ctor();
 
 	read(path.join(__dirname, 'fixtures/test.png'), function (err, file) {
-		t.assert(!err);
+		t.assert(!err, err);
 
 		var stream = new Pngout();
 		var size = file.contents.length;
@@ -49,7 +49,7 @@ test('skip optimizing a non-PNG file', function (t) {
 	t.plan(2);
 
 	read(__filename, function (err, file) {
-		t.assert(!err);
+		t.assert(!err, err);
 
 		var stream = pngout();
 		var buf = file.contents;
@@ -66,7 +66,7 @@ test('skip optimizing an already optimized PNG', function (t) {
 	t.plan(2);
 
 	read(path.join(__dirname, 'fixtures/test-smallest.png'), function (err, file) {
-		t.assert(!err);
+		t.assert(!err, err);
 
 		var stream = pngout();
 		var buf = file.contents;
