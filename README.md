@@ -17,11 +17,30 @@ var Imagemin = require('imagemin');
 var pngout = require('imagemin-pngout');
 
 var imagemin = new Imagemin()
-	.src('foo.png')
-	.dest('foo-optimized.png')
+	.src('images/*.png')
+	.dest('build/images')
 	.use(pngout({ strategy: 1 }));
 
-imagemin.optimize();
+imagemin.run(function (err, files) {
+	if (err) {
+		throw err;
+	}
+
+	console.log('Files optimized successfully!'); 
+});
+```
+
+You can also use this plugin with [gulp](http://gulpjs.com):
+
+```js
+var gulp = require('gulp');
+var pngout = require('imagemin-pngout');
+
+gulp.task('default', function () {
+	return gulp.src('images/*.png')
+		.pipe(pngout({ strategy: 1 })())
+		.pipe(gulp.dest('build/images'));
+});
 ```
 
 
