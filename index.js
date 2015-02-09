@@ -5,17 +5,10 @@ var pngout = require('pngout-bin').path;
 var spawn = require('child_process').spawn;
 var through = require('through2');
 
-/**
- * pngout imagemin plugin
- *
- * @param {Object} opts
- * @api public
- */
-
 module.exports = function (opts) {
 	opts = opts || {};
 
-	return through.ctor({ objectMode: true }, function (file, enc, cb) {
+	return through.ctor({objectMode: true}, function (file, enc, cb) {
 		if (file.isNull()) {
 			cb(null, file);
 		}

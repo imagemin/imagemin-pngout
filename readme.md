@@ -19,7 +19,7 @@ var pngout = require('imagemin-pngout');
 var imagemin = new Imagemin()
 	.src('images/*.png')
 	.dest('build/images')
-	.use(pngout({ strategy: 1 }));
+	.use(pngout({strategy: 1}));
 
 imagemin.run(function (err, files) {
 	if (err) {
@@ -38,7 +38,7 @@ var pngout = require('imagemin-pngout');
 
 gulp.task('default', function () {
 	return gulp.src('images/*.png')
-		.pipe(pngout({ strategy: 1 })())
+		.pipe(pngout({strategy: 1})())
 		.pipe(gulp.dest('build/images'));
 });
 ```
