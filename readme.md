@@ -5,7 +5,7 @@
 
 ## Install
 
-```bash
+```
 $ npm install --save imagemin-pngout
 ```
 
@@ -14,41 +14,36 @@ $ npm install --save imagemin-pngout
 
 ```js
 var Imagemin = require('imagemin');
-var pngout = require('imagemin-pngout');
+var imageminPngout = require('imagemin-pngout');
 
-var imagemin = new Imagemin()
+new Imagemin()
 	.src('images/*.png')
 	.dest('build/images')
-	.use(pngout({strategy: 1}));
-
-imagemin.run(function (err, files) {
-	if (err) {
-		throw err;
-	}
-
-	console.log('Files optimized successfully!'); 
-});
+	.use(imageminPngout({strategy: 1}))
+	.run();
 ```
 
 You can also use this plugin with [gulp](http://gulpjs.com):
 
 ```js
 var gulp = require('gulp');
-var pngout = require('imagemin-pngout');
+var imageminPngout = require('imagemin-pngout');
 
 gulp.task('default', function () {
 	return gulp.src('images/*.png')
-		.pipe(pngout({strategy: 1})())
+		.pipe(imageminPngout({strategy: 1})())
 		.pipe(gulp.dest('build/images'));
 });
 ```
 
 
-## Options
+## API
 
-### strategy
+### imageminPngout(options)
 
-Type: `Number`  
+#### options.strategy
+
+Type: `number`  
 Default: `0`
 
 Select a strategy level between `0` and `4`:
@@ -58,6 +53,7 @@ Select a strategy level between `0` and `4`:
 `2.` Longest match  
 `3.` Huffman only  
 `4.` Uncompressed  
+
 
 ## License
 
