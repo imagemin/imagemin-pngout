@@ -13,35 +13,30 @@ $ npm install --save imagemin-pngout
 ## Usage
 
 ```js
-var Imagemin = require('imagemin');
-var imageminPngout = require('imagemin-pngout');
+const imagemin = require('imagemin');
+const imageminPngout = require('imagemin-pngout');
 
-new Imagemin()
-	.src('images/*.png')
-	.dest('build/images')
-	.use(imageminPngout({strategy: 1}))
-	.run();
-```
-
-You can also use this plugin with [gulp](http://gulpjs.com):
-
-```js
-var gulp = require('gulp');
-var imageminPngout = require('imagemin-pngout');
-
-gulp.task('default', function () {
-	return gulp.src('images/*.png')
-		.pipe(imageminPngout({strategy: 1})())
-		.pipe(gulp.dest('build/images'));
+imagemin(['images/*.png'], 'build/images', {
+	plugins: [
+		imageminPngout()
+	]
+}).then(() => {
+	console.log('Images optimized');
 });
 ```
 
 
 ## API
 
-### imageminPngout(options)
+### imageminPngout([options])(buffer)
 
-#### options.strategy
+Returns a `Promise<Buffer>`.
+
+#### options
+
+Type: `Object`
+
+##### strategy
 
 Type: `number`  
 Default: `0`
