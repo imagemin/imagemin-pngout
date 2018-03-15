@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save imagemin-pngout
+$ npm install imagemin-pngout
 ```
 
 
@@ -38,18 +38,18 @@ Type: `Object`
 
 ##### strategy
 
-Type: `number`  
+Type: `number`<br>
 Default: `0`
 
 Select a strategy level between `0` and `4`:
 
-`0.` Extreme  
-`1.` Intense  
-`2.` Longest match  
-`3.` Huffman only  
-`4.` Uncompressed  
+`0.` Extreme
+`1.` Intense
+`2.` Longest match
+`3.` Huffman only
+`4.` Uncompressed
 
 
 ## License
 
-MIT © [Kevin Mårtensson](https://github.com/kevva)
+MIT © Imagemin

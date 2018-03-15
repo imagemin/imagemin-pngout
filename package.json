@@ -1,51 +1,51 @@
 {
-  "name": "imagemin-pngout",
-  "version": "2.0.0",
-  "description": "pngout imagemin plugin",
-  "license": "MIT",
-  "repository": "imagemin/imagemin-pngout",
-  "author": {
-    "name": "Kevin Mårtensson",
-    "email": "kevinmartensson@gmail.com",
-    "url": "github.com/kevva"
-  },
-  "maintainers": [
-    {
-      "name": "Sindre Sorhus",
-      "email": "sindresorhus@gmail.com",
-      "url": "sindresorhus.com"
-    },
-    {
-      "name": "Shinnosuke Watanabe",
-      "url": "github.com/shinnn"
-    }
-  ],
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "compress",
-    "image",
-    "imageminplugin",
-    "img",
-    "minify",
-    "optimize",
-    "png",
-    "pngout"
-  ],
-  "dependencies": {
-    "execa": "^0.8.0",
-    "is-png": "^1.0.0",
-    "pngout-bin": "^3.0.0"
-  },
-  "devDependencies": {
-    "ava": "^0.23.0",
-    "xo": "^0.18.2"
-  }
+	"name": "imagemin-pngout",
+	"version": "2.0.0",
+	"description": "pngout imagemin plugin",
+	"license": "MIT",
+	"repository": "imagemin/imagemin-pngout",
+	"author": {
+		"name": "Kevin Mårtensson",
+		"email": "kevinmartensson@gmail.com",
+		"url": "github.com/kevva"
+	},
+	"maintainers": [
+		{
+			"name": "Sindre Sorhus",
+			"email": "sindresorhus@gmail.com",
+			"url": "sindresorhus.com"
+		},
+		{
+			"name": "Shinnosuke Watanabe",
+			"url": "github.com/shinnn"
+		}
+	],
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"compress",
+		"image",
+		"imageminplugin",
+		"img",
+		"minify",
+		"optimize",
+		"png",
+		"pngout"
+	],
+	"dependencies": {
+		"execa": "^0.8.0",
+		"is-png": "^1.0.0",
+		"pngout-bin": "^3.0.0"
+	},
+	"devDependencies": {
+		"ava": "^0.23.0",
+		"xo": "^0.18.2"
+	}
 }
