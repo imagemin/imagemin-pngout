@@ -30,8 +30,8 @@ module.exports = opts => buf => {
 	return execa.stdout(pngout, args, {
 		encoding: null,
 		input: buf
-	}).catch(err => {
-		err.message = err.stderr || err.message;
-		throw err;
+	}).catch(error => {
+		error.message = error.stderr || error.message;
+		throw error;
 	});
 };

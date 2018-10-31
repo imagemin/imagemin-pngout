@@ -21,7 +21,7 @@
 		}
 	],
 	"engines": {
-		"node": ">=4"
+		"node": ">=6"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -40,12 +40,12 @@
 		"pngout"
 	],
 	"dependencies": {
-		"execa": "^0.8.0",
+		"execa": "^1.0.0",
 		"is-png": "^1.0.0",
-		"pngout-bin": "^3.0.0"
+		"pngout-bin": "^4.0.0"
 	},
 	"devDependencies": {
-		"ava": "^0.23.0",
-		"xo": "^0.18.2"
+		"ava": "*",
+		"xo": "*"
 	}
 }
