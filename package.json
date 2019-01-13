@@ -45,7 +45,7 @@
 		"pngout-bin": "^4.0.0"
 	},
 	"devDependencies": {
-		"ava": "*",
-		"xo": "*"
+		"ava": "^1.0.1",
+		"xo": "^0.23.0"
 	}
 }

@@ -6,7 +6,7 @@ import m from '.';
 
 const fixture = fs.readFileSync(path.join(__dirname, 'fixture.png'));
 
-test(async t => {
+test('optimize a PNG', async t => {
 	const data = await m()(fixture);
 	t.true(data.length < fixture.length);
 	t.true(isPng(data));
