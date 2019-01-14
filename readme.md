@@ -1,4 +1,4 @@
-# imagemin-pngout [![Build Status](http://img.shields.io/travis/imagemin/imagemin-pngout.svg?style=flat)](https://travis-ci.org/imagemin/imagemin-pngout) [![Build status](https://ci.appveyor.com/api/projects/status/mqx38sxvr436et4j?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/imagemin-pngout)
+# imagemin-pngout [![Build Status](http://img.shields.io/travis/imagemin/imagemin-pngout.svg?style=flat)](https://travis-ci.org/imagemin/imagemin-pngout)
 
 > pngout imagemin plugin
 
