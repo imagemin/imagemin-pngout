@@ -16,13 +16,16 @@ $ npm install imagemin-pngout
 const imagemin = require('imagemin');
 const imageminPngout = require('imagemin-pngout');
 
-imagemin(['images/*.png'], 'build/images', {
-	plugins: [
-		imageminPngout()
-	]
-}).then(() => {
+(async () => {
+	await imagemin(['images/*.png'], {
+		destination: 'build/images',
+		plugins: [
+			imageminPngout()
+		]
+	});
+
 	console.log('Images optimized');
-});
+})();
 ```
 
 
