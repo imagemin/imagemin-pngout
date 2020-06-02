@@ -1,8 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import test from 'ava';
-import isPng from 'is-png';
-import m from '.';
+const fs = require('fs');
+const path = require('path');
+const test = require('ava');
+const isPng = require('is-png');
+const m = require('.');
 
 const fixture = fs.readFileSync(path.join(__dirname, 'fixture.png'));
 

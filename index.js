@@ -3,8 +3,11 @@ const isPng = require('is-png');
 const pngout = require('pngout-bin');
 const execa = require('execa');
 
-module.exports = opts => buf => {
-	opts = Object.assign({strategy: 0}, opts);
+module.exports = options => async buf => {
+	options = {
+		strategy: 0,
+		...options
+	};
 
 	if (!Buffer.isBuffer(buf)) {
 		return Promise.reject(new TypeError(`Expected a \`Buffer\`, got \`${typeof buf}\``));
@@ -23,15 +26,19 @@ module.exports = opts => buf => {
 		'-q'
 	];
 
-	if (typeof opts.strategy === 'number') {
-		args.push(`-s${opts.strategy}`);
+	if (Number.isInteger(options.strategy)) {
+		args.push(`-s${options.strategy}`);
 	}
 
-	return execa.stdout(pngout, args, {
-		encoding: null,
-		input: buf
-	}).catch(error => {
+	try {
+		const {stdout} = await execa(pngout, args, {
+			encoding: null,
+			input: buf
+		});
+
+		return stdout;
+	} catch (error) {
 		error.message = error.stderr || error.message;
 		throw error;
-	});
+	}
 };
