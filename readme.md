@@ -1,4 +1,5 @@
-# imagemin-pngout [![Build Status](http://img.shields.io/travis/imagemin/imagemin-pngout.svg?style=flat)](https://travis-ci.org/imagemin/imagemin-pngout)
+# imagemin-pngout ![GitHub Actions Status](https://github.com/imagemin/imagemin-pngout/workflows/test/badge.svg?branch=master)
+
 
 > pngout imagemin plugin
 
